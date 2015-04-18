@@ -5,9 +5,13 @@
     </head>
 <body>
     <div ng-controller="ChampController as champ">
-        <h1> {{champ_list.champions[0].id}} </h1>
-        <h2> $Product Price </h2>
-        <p> Product Description </p>
+        <div ng-repeat="item in champ.c.champions">
+            <h1> {{item.id}} </h1>
+            <h2> $Product Price </h2>
+            <p> Product Description </p>
+        </div>
+        
+        
     </div>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
