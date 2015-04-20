@@ -5,7 +5,7 @@
   "main": "getJson.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "starts":"node index.js"
+    "starts":"node getJson.js"
   },
   "repository": {
     "type": "git",
