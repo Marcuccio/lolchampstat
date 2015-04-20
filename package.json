@@ -5,7 +5,10 @@
   "main": "getJson.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "starts":"node index.js"
+    "starts": "node index.js"
+  },
+  "dependecies":{
+      "express":"~4.9.x"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,8 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Marcuccio/lolchampstat/issues"
-  }
+  },
+  "keywords": [
+    "lol"
+  ]
 }
