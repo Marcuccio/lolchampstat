@@ -2,12 +2,11 @@
   "name": "LOLchamp",
   "version": "0.1.3",
   "description": "lolchampstats is developing",
-  "main": "getJson.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "starts": "node index.js"
   },
-  "dependecies":{
+  "dependencies":{
       "express":"~4.9.x"
   },
   "repository": {
