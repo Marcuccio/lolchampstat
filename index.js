@@ -8,6 +8,10 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/index.html');
 });
 
+app.get('/champ_gile.json', function(request, response) {
+  response.Json(__dirname + '/champ_file.json');
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
