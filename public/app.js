@@ -1,7 +1,7 @@
 (function(){
     
     var app = angular.module('store', [ ]);
-    
+    console.log("qui dovrebbe");
     app.controller('ChampController', function($scope, $http){
         $https.get('https://lolchampstat.herokuapp.com/champ_file.json')
             .success(function(data, status, headers, config) {
