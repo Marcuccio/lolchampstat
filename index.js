@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/index.html');
 });
 
-app.get('/champ_gile.json', function(request, response) {
+app.get('/champ_file.json', function(request, response) {
   response.Json(__dirname + '/champ_file.json');
 });
 
