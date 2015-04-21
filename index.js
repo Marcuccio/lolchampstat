@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/champ_file.json', function(request, response) {
-  response.Json(__dirname + '/champ_file.json');
+  response.json(__dirname + '/champ_file.json');
 });
 
 app.listen(app.get('port'), function() {
