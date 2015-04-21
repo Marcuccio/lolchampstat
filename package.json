@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "express": "~4.9.x",
-    "fs": "~x.x.x"
+    "fs": "~0.x.x"
   },
   "engines": {
     "node": "0.12.2"
