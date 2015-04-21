@@ -14,8 +14,9 @@ app.get('/', function(request, response) {
 app.get('/champ_file.json', function(request, response) {
     var data = fs.readFileSync('./champ_file.json');
     try {
+        console.log('Ci siamo')
         myObj = JSON.parse(data);
-        response.json(data);
+        response.json(myObj);
     }
     catch (err) {
         console.log('There has been an error parsing your JSON.')
