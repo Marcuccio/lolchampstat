@@ -12,6 +12,7 @@
             <tr>
                 <th><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a></th>
                 <th><a href="" ng-click="predicate = 'stats.armor'; reverse=!reverse">Armor</a></th>
+                <th><a href="" ng-click="predicate = 'stats.spellblock'; reverse=!reverse">Magic resist</a></th>
                 <th><a href="" ng-click="predicate = 'stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
                 <th><a href="" ng-click="predicate = 'stats.attackrange'; reverse=!reverse">Attack range</a></th>
                 <!--<th><a href="" ng-click="predicate = 'stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>-->
@@ -21,11 +22,12 @@
             <tr ng-repeat="item in c.champions | orderBy:predicate:reverse">
                 <td>{{item.name}}</td>
                 <td>{{item.stats.armor}}</td>
+                <td>{{item.stats.spellblock}}</td>
                 <td>{{item.stats.attackdamage}}</td>
                 <td>{{item.stats.attackrange}}</td>
                 <!--<td>{{0.625/(1+{{item.stats.attackspeedoffset}})}}</td>-->
                 <td>{{item.stats.hp}}</td>
-                <td>{{item.stats.movespeed}}</td>
+                <td>{{item.stats.movespeed}}</td>        
             </tr> 
             
         </table>
