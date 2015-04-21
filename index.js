@@ -1,17 +1,29 @@
 var express = require('express');
-var app = express();
+var fs = require('fs');
 
+var app = express();
+      
 app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/index.html');
+    response.sendFile(__dirname + '/index.html');
 });
 
 app.get('/champ_file.json', function(request, response) {
-  response.json(__dirname + '/champ_file.json');
+    var data = fs.readFileSync('./champ_file.json');
+    try {
+        myObj = JSON.parse(data);
+        response.json(data);
+    }
+    catch (err) {
+        console.log('There has been an error parsing your JSON.')
+        console.log(err);
+    }
+  
 });
 
 app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'));
+    console.log("Node app is running at localhost:" + app.get('port'));
 });
