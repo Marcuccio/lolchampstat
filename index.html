@@ -10,10 +10,10 @@
         <table class="table table-striped">
             <tr>
                 <th><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a></th>
-                <th><a href="" ng-click="predicate = 'armor'; reverse=!reverse">Armor</a></th>
-                <th><a href="" ng-click="predicate = 'attackdamage'; reverse=!reverse">Attack damage</a></th>
-                <th><a href="" ng-click="predicate = 'hp'; reverse=!reverse">Hp</a></td>
-                <th><a href="" ng-click="predicate = 'movespeed'; reverse=!reverse">Move speed</a></th>
+                <th><a href="" ng-click="predicate = 'stats.armor'; reverse=!reverse">Armor</a></th>
+                <th><a href="" ng-click="predicate = 'stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
+                <th><a href="" ng-click="predicate = 'stats.hp'; reverse=!reverse">Hp</a></td>
+                <th><a href="" ng-click="predicate = 'stats.movespeed'; reverse=!reverse">Move speed</a></th>
             </tr>
             <tr ng-repeat="item in c.champions | orderBy:predicate:reverse">
                 <td>{{item.name}}</td>
