@@ -8,13 +8,13 @@
     <div class="col-md-10 col-md-offset-1" ng-controller="ChampController as champ">
         <table class="table table-striped">
             <tr>
-                <th><a href="" ng-click="predicate = 'name'">Name</a></td>
-                <th><a href="" ng-click="predicate = 'armor'">Armor</a></td>
-                <th><a href="" ng-click="predicate = 'attackdamage'">Attack damage</a></td>
-                <th><a href="" ng-click="predicate = 'hp'">Hp</a></td>
-                <th><a href="" ng-click="predicate = 'movespeed'">Move speed</a></td>
+                <th><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a></td>
+                <th><a href="" ng-click="predicate = 'armor' reverse=!reverse">Armor</a></td>
+                <th><a href="" ng-click="predicate = 'attackdamage'; reverse=!reverse">Attack damage</a></td>
+                <th><a href="" ng-click="predicate = 'hp'; reverse=!reverse">Hp</a></td>
+                <th><a href="" ng-click="predicate = 'movespeed'; reverse=!reverse">Move speed</a></td>
             </tr>
-            <tr ng-repeat="item in c.champions | orderBy:predicate">
+            <tr ng-repeat="item in c.champions | orderBy:predicate:reverse">
                 <td>{{item.name}}</td>
                 <td>{{item.stats.armor}}</td>
                 <td>{{item.stats.attackdamage}}</td>
