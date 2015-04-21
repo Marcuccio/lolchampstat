@@ -1,9 +1,9 @@
 (function(){
     
     var app = angular.module('stats', [ ]);
-    console.log("qui dovrebbe");
+    
     app.controller('ChampController', function($scope, $http){
-        var predicate = '-name';
+        $scope.predicate = '-name';
 
         $http.get('https://lolchampstat.herokuapp.com/champ_file.json')
             .success(function(data, status, headers, config) {
