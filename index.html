@@ -5,15 +5,16 @@
         <link rel="stylesheet" href="main.css">
     </head>
 <body>
-    <div ng-controller="ChampController as champ">
-        <table class="table">
+    <div class="col-md-10 col-md-offset-1" ng-controller="ChampController as champ">
+        <table class="table table-striped">
             <tr>
-                <td>Name</td>
-                <td>Armor</td>
-                <td>Attack damage</td>
-                <td>Move speed</td>
+                <td><a href="" ng-click="predicate = 'name'">Name</a></td>
+                <td><a href="" ng-click="predicate = 'armor'">Armor</a></td>
+                <td><a href="" ng-click="predicate = 'attackdamage'">Attack damage</a></td>
+                <td><a href="" ng-click="predicate = 'hp'"></a>Hp</td>
+                <td><a href="" ng-click="predicate = 'movespeed'">Move speed</a></td>
             </tr>
-            <tr ng-repeat="item in c.champions">
+            <tr ng-repeat="item in c.champions | orderBy:predicate">
                 <td>{{item.name}}</td>
                 <td>{{item.stats.armor}}</td>
                 <td>{{item.stats.attackdamage}}</td>
@@ -22,9 +23,8 @@
             </tr> 
             
         </table>
-        
+            
     </div>
-    <h1>FUNZIONA STA MERDA</h1>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 
