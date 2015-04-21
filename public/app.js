@@ -1,6 +1,6 @@
 (function(){
     
-    var app = angular.module('store', [ ]);
+    var app = angular.module('stats', [ ]);
     console.log("qui dovrebbe");
     app.controller('ChampController', function($scope, $http){
         console.log("entrato nel controller");
