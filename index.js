@@ -14,7 +14,6 @@ app.get('/', function(request, response) {
 app.get('/champ_file.json', function(request, response) {
     var data = fs.readFileSync('./champ_file.json');
     try {
-        console.log('Ci siamo')
         myObj = JSON.parse(data);
         response.json(myObj);
     }
