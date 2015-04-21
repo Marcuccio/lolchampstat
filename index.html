@@ -8,11 +8,11 @@
     <div class="col-md-10 col-md-offset-1" ng-controller="ChampController as champ">
         <table class="table table-striped">
             <tr>
-                <td><a href="" ng-click="predicate = 'name'">Name</a></td>
-                <td><a href="" ng-click="predicate = 'armor'">Armor</a></td>
-                <td><a href="" ng-click="predicate = 'attackdamage'">Attack damage</a></td>
-                <td><a href="" ng-click="predicate = 'hp'"></a>Hp</td>
-                <td><a href="" ng-click="predicate = 'movespeed'">Move speed</a></td>
+                <th><a href="" ng-click="predicate = 'name'">Name</a></td>
+                <th><a href="" ng-click="predicate = 'armor'">Armor</a></td>
+                <th><a href="" ng-click="predicate = 'attackdamage'">Attack damage</a></td>
+                <th><a href="" ng-click="predicate = 'hp'">Hp</a></td>
+                <th><a href="" ng-click="predicate = 'movespeed'">Move speed</a></td>
             </tr>
             <tr ng-repeat="item in c.champions | orderBy:predicate">
                 <td>{{item.name}}</td>
