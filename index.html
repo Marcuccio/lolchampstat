@@ -6,11 +6,22 @@
     </head>
 <body>
     <div ng-controller="ChampController as champ">
-        <div ng-repeat="item in c.champions">
-            <h1> {{item.id}} </h1>
-            <p> Product Description </p>
-        </div>
-        
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>Armor</td>
+                <td>Attack damage</td>
+                <td>Move speed</td>
+            </tr>
+            <tr ng-repeat="item in c.champions">
+                <td>{{item.name}}</td>
+                <td>{{item.stats.armor}}</td>
+                <td>{{item.stats.attackdamage}}</td>
+                <td>{{item.stats.hp}}</td>
+                <td>{{item.stats.movespeed}}</td>
+            </tr> 
+            
+        </table>
         
     </div>
     <h1>FUNZIONA STA MERDA</h1>
