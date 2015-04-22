@@ -3,7 +3,7 @@
     var app = angular.module('stats', [ ]);
     
     app.controller('ChampController', function($scope, $http){
-        $scope.predicate = '-name';
+        $scope.predicate = 'name';
 
         $http.get('https://lolchampstat.herokuapp.com/champ_file.json')
             .success(function(data, status, headers, config) {
