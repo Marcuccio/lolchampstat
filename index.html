@@ -35,7 +35,7 @@
                         <td class="text-center">{{item.stats.spellblock}}</td>
                         <td class="text-center">{{item.stats.attackdamage}}</td>
                         <td class="text-center">{{item.stats.attackrange}}</td>
-                        <td class="text-center">>{{0.625/(1+item.stats.attackspeedoffset) | limitTo: 5}}</td>
+                        <td class="text-center">>{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
                         <td class="text-center">{{item.stats.hp}}</td>
                         <td class="text-center">{{item.stats.movespeed}}</td>        
                     </tr> 
