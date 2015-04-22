@@ -20,24 +20,28 @@
                 
                 <table class="table table-striped">
                     <thead>
-                        <th class="text-center"><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a></th>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.armor'; reverse=!reverse">Armor</a></th>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.spellblock'; reverse=!reverse">Magic resist</a></th>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.attackrange'; reverse=!reverse">Attack range</a></th>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.hp'; reverse=!reverse">Hp</a></td>
-                        <th class="text-center"><a href="" ng-click="predicate = 'stats.movespeed'; reverse=!reverse">Move speed</a></th>
+                        <tr>
+                            <th class="text-center"><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a></th>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.armor'; reverse=!reverse">Armor</a></th>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.spellblock'; reverse=!reverse">Magic resist</a></th>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.attackrange'; reverse=!reverse">Attack range</a></th>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.hp'; reverse=!reverse">Hp</a></td>
+                            <th class="text-center"><a href="" ng-click="predicate = 'stats.movespeed'; reverse=!reverse">Move speed</a></th>
+                        </tr> 
                     </thead>
-                    <tbody ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
-                        <td class="text-center">{{item.name}}</td>
-                        <td class="text-center">{{item.stats.armor}}</td>
-                        <td class="text-center">{{item.stats.spellblock}}</td>
-                        <td class="text-center">{{item.stats.attackdamage}}</td>
-                        <td class="text-center">{{item.stats.attackrange}}</td>
-                        <td class="text-center">>{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
-                        <td class="text-center">{{item.stats.hp}}</td>
-                        <td class="text-center">{{item.stats.movespeed}}</td>        
+                    <tbody>
+                        <tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
+                            <td class="text-center">{{item.name}}</td>
+                            <td class="text-center">{{item.stats.armor}}</td>
+                            <td class="text-center">{{item.stats.spellblock}}</td>
+                            <td class="text-center">{{item.stats.attackdamage}}</td>
+                            <td class="text-center">{{item.stats.attackrange}}</td>
+                            <td class="text-center">>{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
+                            <td class="text-center">{{item.stats.hp}}</td>
+                            <td class="text-center">{{item.stats.movespeed}}</td>        
+                        </tr>
                     </tbody> 
                 </table>
 
