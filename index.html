@@ -29,7 +29,7 @@
                         <th><a href="" ng-click="predicate = 'stats.hp'; reverse=!reverse">Hp</a></td>
                         <th><a href="" ng-click="predicate = 'stats.movespeed'; reverse=!reverse">Move speed</a></th>
                     </tr>
-                    <tr ng-repeat="item in c.champions | orderBy:predicate:reverse:query">
+                    <tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
                         <td>{{item.name}}</td>
                         <td>{{item.stats.armor}}</td>
                         <td>{{item.stats.spellblock}}</td>
