@@ -12,10 +12,6 @@ app.get('/', function(request, response) {
     response.sendFile(__dirname + '/index.html');
 });
 
-app.get('/img_square/*.png', function(request, response) {
-    response.sendFile(__dirname + '/index.html');
-});
-
 app.get('/champ_file.json', function(request, response) {
     var data = fs.readFileSync('./champ_file.json');
     try {
