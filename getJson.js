@@ -16,7 +16,7 @@ function singleChamp(p) {
             });
             res.on('end', function(){
                 if(champ.champions.length==p.champions.length){
-                   fs.writeFile("champ_file.json", JSON.stringify(champ, null, 4), function(err) {
+                 fs.writeFile("champ_file.json", JSON.stringify(champ, null, 4), function(err) {
                         if(err) {
                             console.log(err);
                         } else {

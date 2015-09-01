@@ -21,7 +21,6 @@ app.get('/champ_file.json', function(request, response) {
         console.log('There has been an error parsing your JSON.')
         console.log(err);
     }
-  
 });
 
 app.listen(app.get('port'), function() {
