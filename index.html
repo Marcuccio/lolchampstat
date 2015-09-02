@@ -9,13 +9,13 @@
     <div class="container">
         
         <div class="row">
+            <div class="col-md-6 " ng-controller="ChampController as champ">
+                <!--Number Patch-->
+                <p>Version: <strong>{{c.version}}</strong></p>
+            </div>
             <div class="col-md-3 col-md-offset-3 ">
                 <!--Sidebar content-->
                 Search: <input ng-model="query">
-            </div>
-            <div class="col-md-6 " ng-controller="ChampController as champ">
-                <!--Number Patch-->
-                Version: {{c.version}}
             </div>
         </div>
         <div class="row">
@@ -36,7 +36,7 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
-                            <td class="text-center" display: table-cell ><img ng-src="{{item.name}}_Square_0.png"></td>
+                            <td class="img-thumbnail" display: table-cell ><img ng-src="{{item.name}}_Square_0.png"></td>
                             <td class="text-center" display: table-cell >{{item.name}}</td>
                             <td class="text-center" display: table-cell >{{item.stats.armor}}</td>
                             <td class="text-center" display: table-cell >{{item.stats.spellblock}}</td>
