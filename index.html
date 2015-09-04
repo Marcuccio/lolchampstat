@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="stats">
 	<head>
-		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap-responsive.min.css">
 		<link rel="stylesheet" href="main.css">
 		
 		<title>Stats champions</title>
 		
    </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
         
-		<div class="row">
-			<div class="col-md-6 " ng-controller="ChampController as champ">
+		<div class="row-fluid">
+			<div class="span6 " ng-controller="ChampController as champ">
 				<!--Number Patch-->
 				<p>Version: <strong>{{c.version}}</strong></p>
 			</div>
-			<div class="col-md-3 col-md-offset-3 ">
+			<div class="span6">
 				<!--Sidebar content-->
 				Search: <input ng-model="query">
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-3">
+		<div class="row-fluid">
+			<div class="span6">
 				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12" ng-controller="ChampController as champ">
+		<div class="row-fluid">
+			<div class="span12" ng-controller="ChampController as champ">
 				 <table class="table table-striped">
 					  <thead>
 							<tr>
@@ -79,9 +79,10 @@
    </div>
     
    <script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
    <script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript" src="bootstrap.min.js"></script>
+	
 
 </body>
 </html>
