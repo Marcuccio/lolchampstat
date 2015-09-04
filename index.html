@@ -64,19 +64,26 @@
 				<div class="modal-content">
 					<div class="cotainer-fluid">
 						<div class="row">
-							<div class="col-md-5">
-							<img ng_src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{m.key}}_0.jpg">
+							<div class="col-md-4">
+							<img ng-alt="" ng_src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{m.key}}_0.jpg">
 							</div>
-							<div class="col-md-1">
-								<ul class="list-unstyled">
-									<li><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/passive/{{m.passive.image.full}} "></li>
-									<li><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[0].image.full}} "></li>
-									<li><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[1].image.full}} "></li>
-									<li><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[2].image.full}} "></li>
-									<li><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.speels[3].image.full}} "></li>															
-								</ul>
+							<div class="col-md-2">
+								<dl>
+									<dt>{{m.passive.description}}</dt>
+									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/passive/{{m.passive.image.full}} "></li></dd>
+									<dt>{{m.spells[0].tooltip}}</dt>
+									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[0].image.full}} "></dd>
+									<dt>{{m.spells[0].tooltip}}</dt>
+									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[1].image.full}} "></dd>
+									<dt>{{m.spells[0].tooltip}}</dt>
+									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[2].image.full}} "></dd>
+									<dt>{{m.spells[0].tooltip}}</dt>
+									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.speels[3].image.full}} "></dd>															
+								</dl>
 							</div>
-							<div class="col-md-6"></div>
+							<div class="col-md-6">
+								<p></p>
+							</div>
 						</div>
 					</div>
 				</div>
