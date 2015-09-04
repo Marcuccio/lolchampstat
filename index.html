@@ -8,8 +8,8 @@
 		
    </head>
 <body>
-	<div class="container" ng-controller="ModalController as modal">
-        
+	
+	<div class="container" ng-controller="ModalController as modal">   
 		<div class="row">
 			<div class="col-md-6 " ng-controller="ChampController as champ">
 				<!--Number Patch-->
@@ -59,21 +59,19 @@
 				 </table>
 			</div>
 		</div>
-	
 		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-		  <div class="modal-dialog modal-lg">
-			 <div class="modal-content">
-				<p>{{m.title}}</p>
-			 </div>
-		  </div>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<p><strong>Title:</strong>{{m.title}}</p>
+					<p><strong>Passive:</strong>{{m.passive.name}}:{{m.passive.description}}</p>
+				</div>
+			</div>
 		</div>
-   </div>
+	</div>
     
    <script type="text/javascript" src="angular.min.js"></script>
    <script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap.min.js"></script>
-	
-
 </body>
 </html>
