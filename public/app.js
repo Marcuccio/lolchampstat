@@ -15,9 +15,10 @@
 		});
 	
 	app.controller('ModalController', function($scope, $http){
-		this.loadModal = function(){
+		this.loadModal = function(idx){
 			var id = $(this).attr('data-id');
 			console.log(id);
+			console.log(idx);
 		}; 
 	});
     
