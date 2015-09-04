@@ -1,7 +1,7 @@
 @media print {
    thead {display: table-header-group;}
 }
+
 img.img-thumbnail.champ{
 	height: 70%;
-	width: 70%;
 }
