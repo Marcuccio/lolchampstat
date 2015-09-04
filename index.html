@@ -6,51 +6,68 @@
         <title>Stats champions</title>
     </head>
 <body>
-    <div class="container">
+	<div class="container">
         
-        <div class="row">
-            <div class="col-md-6 " ng-controller="ChampController as champ">
-                <!--Number Patch-->
-                <p>Version: <strong>{{c.version}}</strong></p>
-            </div>
-            <div class="col-md-3 col-md-offset-3 ">
-                <!--Sidebar content-->
-                Search: <input ng-model="query">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12" ng-controller="ChampController as champ">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th class="text-center" display:table-header-group><a href=""></a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='name'; reverse=!reverse">Name</a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.armor'; reverse=!reverse">Armor</a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.spellblock'; reverse=!reverse">Magic resist</a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackrange'; reverse=!reverse">Attack range</a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.hp'; reverse=!reverse">Hp</a></td>
-                            <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.movespeed'; reverse=!reverse">Move speed</a></th>
-                        </tr> 
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
-                            <td class="img-thumbnail" display: table-cell ><img ng-src="{{item.name}}_Square_0.png"></td>
-                            <td class="text-center" display: table-cell >{{item.name}}</td>
-                            <td class="text-center" display: table-cell >{{item.stats.armor}}</td>
-                            <td class="text-center" display: table-cell >{{item.stats.spellblock}}</td>
-                            <td class="text-center" display: table-cell >{{item.stats.attackdamage}}</td>
-                            <td class="text-center" display: table-cell >{{item.stats.attackrange}}</td>
-                            <td class="text-center" display: table-cell >{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
-                            <td class="text-center" display: table-cell >{{item.stats.hp}}</td>
-                            <td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>        
-                        </tr>
-                    </tbody> 
-                </table>
-            </div>
-        </div>
-    </div>
+		<div class="row">
+			<div class="col-md-6 " ng-controller="ChampController as champ">
+				<!--Number Patch-->
+				<p>Version: <strong>{{c.version}}</strong></p>
+			</div>
+			<div class="col-md-3 col-md-offset-3 ">
+				<!--Sidebar content-->
+				Search: <input ng-model="query">
+			</div>
+		</div>
+		<div class="row">
+			<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+		</div>
+		<div class="row">
+			<div class="col-md-12" ng-controller="ChampController as champ">
+				 <table class="table table-striped">
+					  <thead>
+							<tr>
+								 <th class="text-center" display:table-header-group><a href=""></a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='name'; reverse=!reverse">Name</a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.armor'; reverse=!reverse">Armor</a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.spellblock'; reverse=!reverse">Magic resist</a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackrange'; reverse=!reverse">Attack range</a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.hp'; reverse=!reverse">Hp</a></td>
+								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.movespeed'; reverse=!reverse">Move speed</a></th>
+							</tr> 
+					  </thead>
+					  <tbody>
+							<tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
+								 <td class="img-thumbnail" display: table-cell ><img ng-src="{{item.name}}_Square_0.png"></td>
+								 <td class="text-center" display: table-cell >{{item.name}}</td>
+								 <td class="text-center" display: table-cell >{{item.stats.armor}}</td>
+								 <td class="text-center" display: table-cell >{{item.stats.spellblock}}</td>
+								 <td class="text-center" display: table-cell >{{item.stats.attackdamage}}</td>
+								 <td class="text-center" display: table-cell >{{item.stats.attackrange}}</td>
+								 <td class="text-center" display: table-cell >{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
+								 <td class="text-center" display: table-cell >{{item.stats.hp}}</td>
+								 <td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>        
+							</tr>
+					  </tbody> 
+				 </table>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-header">
+			 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			 <h3 id="myModalLabel">Modal header</h3>
+		  </div>
+		  <div class="modal-body">
+			 <p>One fine body…</p>
+		  </div>
+		  <div class="modal-footer">
+			 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			 <button class="btn btn-primary">Save changes</button>
+		  </div>
+		</div>
+   </div>
     
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
