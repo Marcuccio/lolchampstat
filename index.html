@@ -82,12 +82,12 @@
 											{{m.skins[0].name}}
 											</div>
 										</div>
-										<div ng-repeat="item in m.skins|filter:$index>0" class="item active">
+										<div ng-repeat="item in m.skins ng-if="!$first"" class="item">
 											<img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{m.key}}_{{item.num}}.jpg">
 											<div class="carousel-caption">
 											{{item.name}}
 											</div>
-									</div>
+										</div>
 
 									<!-- Controls -->
 									<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -100,9 +100,9 @@
 									</a>
 								</div>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-3">
 								<dl>
-									<dt>{{m.passive.description}}</dt>
+									<dt>{{m.passive.name}}</dt>
 									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/passive/{{m.passive.image.full}} "></li></dd>
 									<dt>{{m.spells[0].name}}</dt>
 									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.spells[0].image.full}} "></dd>
@@ -114,7 +114,7 @@
 									<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/spell/{{m.speels[3].image.full}} "></dd>															
 								</dl>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<p></p>
 							</div>
 						</div>
