@@ -31,28 +31,31 @@
 				 <table class="table table-striped">
 					  <thead>
 							<tr>
-								 <th class="text-center" display:table-header-group><a href=""></a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='name'; reverse=!reverse">Name</a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.armor'; reverse=!reverse">Armor</a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.spellblock'; reverse=!reverse">Magic resist</a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackrange'; reverse=!reverse">Attack range</a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.hp'; reverse=!reverse">Hp</a></td>
-								 <th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.movespeed'; reverse=!reverse">Move speed</a></th>
+								<th class="text-center" display:table-header-group></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='name'; reverse=!reverse">Name</a></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.armor'; reverse=!reverse">Armor</a></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.spellblock'; reverse=!reverse">Magic resist</a></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackrange'; reverse=!reverse">Attack range</a></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.hp'; reverse=!reverse">Hp</a></td>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.movespeed'; reverse=!reverse">Move speed</a></th>
+						  		<th class="text-center" display:table-header-group></span>
+</th>
 							</tr> 
 					  </thead>
 					  <tbody>
 							<tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
-								 <td display: table-cell ><img class="img-thumbnail champ" ng-src="{{item.name}}_Square_0.png"></td>
-								 <td class="text-center" display: table-cell >{{item.name}}</td>
-								 <td class="text-center" display: table-cell >{{item.stats.armor}}</td>
-								 <td class="text-center" display: table-cell >{{item.stats.spellblock}}</td>
-								 <td class="text-center" display: table-cell >{{item.stats.attackdamage}}</td>
-								 <td class="text-center" display: table-cell >{{item.stats.attackrange}}</td>
-								 <td class="text-center" display: table-cell >{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
-								 <td class="text-center" display: table-cell >{{item.stats.hp}}</td>
-								 <td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>        
+								<td display: table-cell ><img class="img-thumbnail champ" ng-src="{{item.name}}_Square_0.png"></td>
+								<td class="text-center" display: table-cell >{{item.name}}</td>
+								<td class="text-center" display: table-cell >{{item.stats.armor}}</td>
+								<td class="text-center" display: table-cell >{{item.stats.spellblock}}</td>
+								<td class="text-center" display: table-cell >{{item.stats.attackdamage}}</td>
+								<td class="text-center" display: table-cell >{{item.stats.attackrange}}</td>
+								<td class="text-center" display: table-cell >{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
+								<td class="text-center" display: table-cell >{{item.stats.hp}}</td>
+								<td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>       
+								<td display: table-cell ><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></button></td>
 							</tr>
 					  </tbody> 
 				 </table>
