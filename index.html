@@ -49,8 +49,8 @@
 								<td class="text-center" display: table-cell >{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
 								<td class="text-center" display: table-cell >{{item.stats.hp}}</td>
 								<td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>       
-								<td display: table-cell nd-controller="ModalController as model">
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="model.loadModel({{item.id}})">
+								<td display: table-cell nd-controller="ModalController as modal">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="modal.loadModal({{item.id}})">
 										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true">
 									</button>
 								</td>
