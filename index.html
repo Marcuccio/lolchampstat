@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+			<div class="col-md-3"><button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button></div>
 		</div>
 		<div class="row">
 			<div class="col-md-12" ng-controller="ChampController as champ">
@@ -39,7 +39,7 @@
 					  </thead>
 					  <tbody>
 							<tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
-								 <td class="img-thumbnail" display: table-cell ><img ng-src="{{item.name}}_Square_0.png"></td>
+								 <td display: table-cell ><img class="img-thumbnail" ng-src="{{item.name}}_Square_0.png"></td>
 								 <td class="text-center" display: table-cell >{{item.name}}</td>
 								 <td class="text-center" display: table-cell >{{item.stats.armor}}</td>
 								 <td class="text-center" display: table-cell >{{item.stats.spellblock}}</td>
@@ -53,6 +53,7 @@
 				 </table>
 			</div>
 		</div>
+	
 		<!-- Modal -->
 		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-header">
