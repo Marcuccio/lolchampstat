@@ -25,7 +25,6 @@
 			  // log error
 				 console.log("errore nella get");
 			});
-		});
 		}; 
 	});
     
