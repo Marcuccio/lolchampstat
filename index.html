@@ -8,7 +8,7 @@
 		
    </head>
 <body>
-	<div class="container">
+	<div class="container" ng-controller="ModalController as modal">
         
 		<div class="row">
 			<div class="col-md-6 " ng-controller="ChampController as champ">
@@ -49,8 +49,8 @@
 								<td class="text-center" display: table-cell >{{0.625/(1+(item.stats.attackspeedoffset)) | limitTo: 5}}</td>
 								<td class="text-center" display: table-cell >{{item.stats.hp}}</td>
 								<td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>       
-								<td display: table-cell ng-controller="ModalController as modal">
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="modal.loadModal({{item.id}})">
+								<td display: table-cell>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="modal.loadModal(2)">
 										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true">
 									</button>
 								</td>
