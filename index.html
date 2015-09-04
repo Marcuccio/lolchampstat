@@ -62,9 +62,21 @@
 		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
-					<p><strong>Title:</strong>{{m.title}}</p>
-					<img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/passive/{{m.passive.image.full}}">
-					<p><strong>Passive:</strong>{{m.passive.name}}:{{m.passive.description}}</p>
+					<div class="cotainer-fluid">
+						<div class="row">
+							<div class="col-md-5"></div>
+							<div class="col-md-1">
+								<ul>
+									<li><img ng-src="http://ddragon.leagueoflegends.com/cdn/5.2.1/img/passive/{{m.passive.image.full}} "</li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>																	
+								</ul>
+							</div>
+							<div class="col-md-6"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
