@@ -15,7 +15,8 @@
 		});
 	
 	app.controller('ModalController', function($scope, $http){
-		$this.attr('data-id');
+		$this.loadModal = function(){
+			var id = $(this).attr('data-id');
 			console.log(id);
 		}; 
 	});
