@@ -24,13 +24,18 @@ img.img-thumbnail.champ{
 }
 header{
 	position: absolute;
+	top: 0;
 	width: 100%;
+	min-width: 1000px;
+	height: 1080px;
 	background-image: url(galleryHeader.jpg);
-	min-width: 1180px;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .header_span{
-	min-height: 525px;
-	min-width: 1180px;
+	height: 525px;
+	min-height: 225px;
+	width: 100%;
 }
 .table>tbody{
 	background-color: seashell;
