@@ -8,6 +8,9 @@ table{
 body{
 	background-color: black;
 }
+p.white{
+	color: white;
+}
 
 img.img-thumbnail.champ{
 	height: 70%;
@@ -24,7 +27,7 @@ header{
 	width: 100%;
 }
 .header_span{
-	min-height: 5250px;
+	min-height: 525px;
 }
 .table>tbody{
 	background-color: seashell;
