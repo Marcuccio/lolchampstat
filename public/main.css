@@ -22,15 +22,32 @@ img.img-thumbnail.champ{
     vertical-align: middle;
     border-top: 1px solid #ddd;
 }
-header{
-	position: absolute;
+#content-promo{
+	position: relative;
 	top: 0;
 	width: 100%;
 	min-width: 1000px;
 	height: 1080px;
+	overflow: hidden;
+}
+#content-promo .content-promo-rotator {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    z-index: 0;
+}
+#content-promo .content-promo-rotator .promo-background {
+    position: absolute;
+    width: 100%;
+    min-width: 1000px;
+    height: 1080px;
+    background: transparent none 50% 0px no-repeat;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    z-index: -1;
 	background-image: url(galleryHeader.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
 }
 .header_span{
 	height: 525px;
