@@ -2,6 +2,13 @@
    thead {display: table-header-group;}
 }
 
+table{
+	color: #337ab7;
+}
+body{
+	background-color: black;
+}
+
 img.img-thumbnail.champ{
 	height: 70%;
 }
@@ -11,4 +18,8 @@ img.img-thumbnail.champ{
     line-height: 1.42857143;
     vertical-align: middle;
     border-top: 1px solid #ddd;
+}
+header>img>#header_img{
+	max-height: 750px;
+	min-height: 750px;
 }

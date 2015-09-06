@@ -8,27 +8,22 @@
 		
    </head>
 <body>
-	
+	<header>
+		<img id="header_img" src="galleryHeader.jpg" alt="League of Legends">
+	</header>
 	<div class="container" ng-controller="ModalController as modal">
-		<header>
-			<!-- Wrapper for slides -->
-			<div class="item">
-				<img src="galleryHeader.jpg" alt="League of Legends">
-			</div>
-		</header>
 		<div class="row">
 			<div class="col-md-6 " ng-controller="ChampController as champ">
 				<!--Number Patch-->
 				<p>Patch: <strong>{{c.version}}</strong></p>
 			</div>
-			<div class="span6">
-				<!--Sidebar content-->
+			<div class="col-md-6">
 				Search: <input ng-model="query">
 			</div>
 		</div>		
 		<div class="row">
 			<div class="col-md-12" ng-controller="ChampController as champ">
-				 <table class="table table-striped">
+				 <table class="table">
 					  <thead>
 							<tr>
 								<th class="text-center" display:table-header-group></th>
