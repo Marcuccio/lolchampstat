@@ -20,5 +20,6 @@ img.img-thumbnail.champ{
     border-top: 1px solid #ddd;
 }
 #header_img{
+	width: 100%;
 	min-height: 900px;
 }
