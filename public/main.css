@@ -24,8 +24,9 @@ header{
 	width: 100%;
 }
 .header_span{
-	min-height: 680px;
+	min-height: 5250px;
 }
 .table>tbody{
 	background-color: seashell;
 }
+.bottom-margin { margin-bottom:50px;}
