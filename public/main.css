@@ -19,7 +19,6 @@ img.img-thumbnail.champ{
     vertical-align: middle;
     border-top: 1px solid #ddd;
 }
-header>img>#header_img{
-	max-height: 750px;
-	min-height: 750px;
+#header_img{
+	min-height: 900px;
 }
