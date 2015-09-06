@@ -29,31 +29,30 @@ img.img-thumbnail.champ{
 	min-width: 1000px;
 	height: 1080px;
 	overflow: hidden;
+	margin-bottom: -832px;
+	top: -95px;
+	z-index: -1;
 }
 #content-promo .content-promo-rotator {
-    position: absolute;
-    width: 100%;
-    top: 0px;
-    z-index: 0;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	z-index: 0;
 }
 #content-promo .content-promo-rotator .promo-background {
-    position: absolute;
-    width: 100%;
-    min-width: 1000px;
-    height: 1080px;
-    background: transparent none 50% 0px no-repeat;
-    border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    z-index: -1;
+	position: absolute;
+	width: 100%;
+	min-width: 1000px;
+	height: 1080px;
+	background: transparent none 50% 0px no-repeat;
+	border: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	z-index: -1;
 	background-image: url(galleryHeader.jpg);
 }
-.header_span{
-	height: 525px;
-	min-height: 225px;
-	width: 100%;
-}
+
 .table>tbody{
 	background-color: seashell;
 }
