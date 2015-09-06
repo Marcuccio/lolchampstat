@@ -8,17 +8,19 @@
 		
    </head>
 <body>
+	<div class="row">
+		<div class="col-md-6 " ng-controller="ChampController as champ">
+			<!--Number Patch-->
+			<p>Patch: <strong>{{c.version}}</strong></p>
+		</div>
+	</div>		
 	<header>
 		<img id="header_img" src="galleryHeader.jpg" alt="League of Legends">
 	</header>
 	<div class="header_span"></div>
 	<div class="container" ng-controller="ModalController as modal">
 		<div class="row">
-			<div class="col-md-6 " ng-controller="ChampController as champ">
-				<!--Number Patch-->
-				<p>Patch: <strong>{{c.version}}</strong></p>
-			</div>
-			<div class="col-md-6">
+			<div class="col-md-9 col-offset-3">
 				Search: <input ng-model="query">
 			</div>
 		</div>		
