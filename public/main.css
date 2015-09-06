@@ -25,9 +25,12 @@ img.img-thumbnail.champ{
 header{
 	position: absolute;
 	width: 100%;
+	background-image: url(galleryHeader.jpg);
+	min-width: 1180px;
 }
 .header_span{
 	min-height: 525px;
+	min-width: 1180px;
 }
 .table>tbody{
 	background-color: seashell;
