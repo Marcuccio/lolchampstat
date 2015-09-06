@@ -19,7 +19,10 @@ img.img-thumbnail.champ{
     vertical-align: middle;
     border-top: 1px solid #ddd;
 }
-#header_img{
+header{
+	position: absolute;
 	width: 100%;
-	min-height: 900px;
+}
+.header_span{
+	min-height: 740px;
 }
