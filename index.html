@@ -39,10 +39,9 @@
 								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackdamage'; reverse=!reverse">Attack damage</a></th>
 								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackrange'; reverse=!reverse">Attack range</a></th>
 								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.attackspeedoffset'; reverse=!reverse">Attack speed</a></th>
-								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.hp'; reverse=!reverse">Hp</a></td>
+								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.hp'; reverse=!reverse">Hp</a></th>
 								<th class="text-center" display:table-header-group><a href="" ng-click="predicate ='stats.movespeed'; reverse=!reverse">Move speed</a></th>
-						  		<th class="text-center" display:table-header-group></span>
-</th>
+						  		<th class="text-center" display:table-header-group></th>
 							</tr> 
 					  </thead>
 					  <tbody>
@@ -58,7 +57,7 @@
 								<td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>       
 								<td display: table-cell>
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" data-id="3" ng-click="modal.loadModal(item.id)">
-										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true">
+										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true">S</span>
 									</button>
 								</td>
 							</tr>
@@ -128,6 +127,6 @@
    <script type="text/javascript" src="angular.min.js"></script>
    <script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript" src="bootstrap.moin.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
 </body>
 </html>
