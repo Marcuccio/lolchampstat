@@ -56,4 +56,11 @@ img.img-thumbnail.champ{
 .table>tbody{
 	background-color: seashell;
 }
+
+.spell{
+	text-align: center;
+}
+.spellImage{
+	
+}
 .bottom-margin { margin-bottom:50px;}

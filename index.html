@@ -57,7 +57,7 @@
 								<td class="text-center" display: table-cell >{{item.stats.movespeed}}</td>       
 								<td display: table-cell>
 									<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" data-id="3" ng-click="modal.loadModal(item.id)">
-										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true">S</span>
+										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
 									</button>
 								</td>
 							</tr>
@@ -100,21 +100,21 @@
 						</div>
 							<div class="col-md-8">
 								<div class="row">
-									<div class="col-md-12"><p>{{m.title}}</p></div>
+									<div class="col-md-12 text-center"><strong>{{m.title}}</strong></div>
 								</div>	
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1">{{m.passive.name}}</div>
-									<div class="col-md-2">{{m.spells[0].name}}</div>
-									<div class="col-md-2">{{m.spells[1].name}}</div>
-									<div class="col-md-2">{{m.spells[2].name}}</div>
-									<div class="col-md-2">{{m.spells[3].name}}</div>
+									<div class="col-md-1 text-center">{{m.passive.name}}</div>
+									<div class="col-md-1 text-center">{{m.spells[0].name}}</div>
+									<div class="col-md-1 text-center">{{m.spells[1].name}}</div>
+									<div class="col-md-1 text-center">{{m.spells[2].name}}</div>
+									<div class="col-md-1 text-center">{{m.spells[3].name}}</div>
 								</div>
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}} "></div>
-									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}} "></div>
-									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}} "></div>
-									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}} "></div>
-									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}} "></div>
+									<div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}} "></div>
+									<div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}} "></div>
+									<div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}} "></div>
+									<div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}} "></div>
+									<div class="col-md-1"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}} "></div>
 								</div>																				
 							</div>
 						</div>
