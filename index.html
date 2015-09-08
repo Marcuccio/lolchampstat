@@ -99,23 +99,25 @@
 									</div>
 								</div>
 						</div>
-						<div class="col-md-3">
-							<dl>
-								<dt>{{m.passive.name}}</dt>
-								<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}} "></dd>
-								<dt>{{m.spells[0].name}}</dt>
-								<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}} "></dd>
-								<dt>{{m.spells[1].name}}</dt>
-								<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}} "></dd>
-								<dt>{{m.spells[2].name}}</dt>
-								<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}} "></dd>
-								<dt>{{m.spells[3].name}}</dt>
-								<dd><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}} "></dd>															
-							</dl>
-						</div>
-						<div class="col-md-5">
-							<p></p>
-						</div>
+							<div class="col-md-8">
+								<div class="row">
+									<div class="col-md-12"><p>{{m.title}}</p></div>
+								</div>	
+								<div class="row">
+									<div class="col-md-2">{{m.passive.name}}</div>
+									<div class="col-md-2">{{m.spells[0].name}}</div>
+									<div class="col-md-2">{{m.spells[1].name}}</div>
+									<div class="col-md-2">{{m.spells[2].name}}</div>
+									<div class="col-md-2">{{m.spells[3].name}}</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}} "></div>
+									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}} "></div>
+									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}} "></div>
+									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}} "></div>
+									<div class="col-md-2"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}} "></div>
+								</div>																				
+							</div>
 						</div>
 					</div>
 				</div>
@@ -126,6 +128,6 @@
    <script type="text/javascript" src="angular.min.js"></script>
    <script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap.moin.js"></script>
 </body>
 </html>
