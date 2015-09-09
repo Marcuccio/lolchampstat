@@ -58,7 +58,10 @@ img.img-thumbnail.champ{
 }
 
 .spell{
-	text-align: center;
+	width: 20%;
+	font-size: 12px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .spellImage{
 	
