@@ -27,5 +27,15 @@
 			});
 		}; 
 	});
+	
+	app.controller("PanelController", function(){ });
+		this.tab=1;
+	
+	this.selectTab(setTab){
+		this.tab=setTab;
+	}
+	this.isSelected(checkTab){
+		return this.tab===this.checkTab;
+	}
     
 })();

@@ -99,23 +99,38 @@
 								</div>
 						</div>
 							<div class="col-md-8">
-								<div class="row title">
+								<section class="row title">
 									<div class="col-md-12 text-center"><strong>{{m.title}}</strong></div>
-								</div>	
-								<div class="row">
-									<div class="spell text-center">Passive</div>
-									<div class="spell text-center">W</div>
-									<div class="spell text-center">W</div>
-									<div class="spell text-center">E</div>
-									<div class="spell text-center">R</div>
-								</div>
-								<div class="row">
-									<div class="spell text-center" data-toggle="tooltip" data-placement="top" title="{{m.passive.name}}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}} "></div>
-									<div class="spell text-center" data-toggle="tooltip" data-placement="top" title="{{m.spells[0].name}}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}} "></div>
-									<div class="spell text-center" data-toggle="tooltip" data-placement="top" title="{{m.spells[1].name}}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}} "></div>
-									<div class="spell text-center" data-toggle="tooltip" data-placement="top" title="{{m.spells[2].name}}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}} "></div>
-									<div class="spell text-center" data-toggle="tooltip" data-placement="top" title="{{m.spells[3].name}}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}} "></div>
-								</div>																				
+								</section>	
+								<section ng-controller="PanelController as panel">
+									<ul class="nav nav-pills">
+										<li ng-class="{active:panel.isSelected(1)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}}" ng-click="panel.selectTab(1)"></li>
+										<li ng-class="{active:panel.isSelected(2)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}}" ng-click="panel.selectTab(2)"></li>
+										<li ng-class="{active:panel.isSelected(3)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}}" ng-click="panel.selectTab(3)"></li>
+										<li ng-class="{active:panel.isSelected(4)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}}" ng-click="panel.selectTab(4)2"></li>
+										<li ng-class="{active:panel.isSelected(5)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}}" ng-click="panel.selectTab(5)"></li>
+									</ul>
+									<div class="panel" ng-show="panel.isSelected(1)">
+										<h4>{{m.passive.name}}</h4>
+										<p>{{m.passive.sanitizedTooltip}}</p>
+									</div>
+									<div class="panel" ng-show="panel.isSelected(2)">
+										<h4>{{m.passive.name}}</h4>
+										<p>{{m.spells[0].sanitizedTooltip}}</p>
+									</div>
+									<div class="panel" ng-show="panel.isSelected(3)">
+										<h4>{{m.passive.name}}</h4>
+										<p>{{m.spells[1].sanitizedTooltip}}</p>
+									</div>
+									<div class="panel" ng-show="panel.isSelected(4)">
+										<h4>{{m.passive.name}}</h4>
+										<p>{{m.spells[2].sanitizedTooltip}}</p>
+									</div>
+									<div class="panel" ng-show="panel.isSelected(5)">
+										<h4>{{m.passive.name}}</h4>
+										<p>{{m.spells[3].sanitizedTooltip}}</p>
+									</div>
+								</section>																				
 							</div>
 						</div>
 					</div>
