@@ -58,10 +58,15 @@ img.img-thumbnail.champ{
 }
 
 .spell{
+	float: left;
 	width: 20%;
 	font-size: 12px;
 	padding-left: 0px;
 	padding-right: 0px;
+}
+.title{
+	margin-bottom: 16px;
+	font-size: 16px;
 }
 .spellImage{
 	
