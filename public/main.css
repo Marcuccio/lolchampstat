@@ -65,4 +65,11 @@ img.img-thumbnail.champ{
 	margin-bottom: 16px;
 	font-size: 16px;
 }
+.nav-pills>li{
+	 min-width: 100px;
+    text-align: center;
+}
+.nav-pills>li.active{
+	background-color: #337ab7;
+}
 .bottom-margin { margin-bottom:50px;}
