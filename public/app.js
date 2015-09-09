@@ -35,7 +35,7 @@
 			this.tab=setTab;
 		};
 		this.isSelected = function(checkTab){
-			return this.tab==this.checkTab;
+			return this.tab===this.checkTab;
 		};	
 	});
 

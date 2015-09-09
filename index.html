@@ -107,9 +107,10 @@
 										<li ng-class="{active:panel.isSelected(1)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/passive/{{m.passive.image.full}}" ng-click="panel.selectTab(1)"></li>
 										<li ng-class="{active:panel.isSelected(2)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[0].image.full}}" ng-click="panel.selectTab(2)"></li>
 										<li ng-class="{active:panel.isSelected(3)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}}" ng-click="panel.selectTab(3)"></li>
-										<li ng-class="{active:panel.isSelected(4)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}}" ng-click="panel.selectTab(4)2"></li>
+										<li ng-class="{active:panel.isSelected(4)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}}" ng-click="panel.selectTab(4)"></li>
 										<li ng-class="{active:panel.isSelected(5)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}}" ng-click="panel.selectTab(5)"></li>
 									</ul>
+									
 									<div class="panel" ng-show="panel.isSelected(1)">
 										<h4>{{m.passive.name}}</h4>
 										<p>{{m.passive.sanitizedDescription}}</p>
