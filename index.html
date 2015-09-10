@@ -13,21 +13,21 @@
 			<!--Number Patch-->
 			<p class="white">Patch: <strong>{{c.version}}</strong></p>
 		</div>
-	</div>		
+	</div>	//patch	
 	<div id="content-promo">
 		<div class="content-promo-rotator">
 			<div class="promo-background">
 			</div>
 		</div>
-	
-	</div>
+	</div> //riven header
 	<div class="container" ng-controller="ModalController as modal">
 		<div class="row bottom-margin" >
 			<div class="col-md-9 col-offset-3">
 				<p class="white">Search: </p><input ng-model="query">
 			</div>
-		</div>		
-		<div class="row">
+		</div>	//search
+		
+		<div class="row">//table
 			<div class="col-md-12" ng-controller="ChampController as champ">
 				 <table class="table">
 					  <thead>
@@ -109,27 +109,26 @@
 										<li ng-class="{active:panel.isSelected(3)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[1].image.full}}" ng-click="panel.selectTab(3)"></li>
 										<li ng-class="{active:panel.isSelected(4)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}}" ng-click="panel.selectTab(4)"></li>
 										<li ng-class="{active:panel.isSelected(5)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}}" ng-click="panel.selectTab(5)"></li>
-									</ul>
-									
+									</ul>									
 									<div class="panel" ng-show="panel.isSelected(1)">
 										<h4>{{m.passive.name}}</h4>
 										<p>{{m.passive.sanitizedDescription}}</p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(2)">
 										<h4>{{m.spells[0].name}}</h4>
-										<p>{{m.spells[0].sanitizedTooltip}}</p>
+										<p>{{m.spells[0].Tooltip}}</p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(3)">
 										<h4>{{m.spells[1].name}}</h4>
-										<p>{{m.spells[1].sanitizedTooltip}}</p>
+										<p>{{m.spells[1].Tooltip}}</p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(4)">
 										<h4>{{m.spells[2].name}}</h4>
-										<p>{{m.spells[2].sanitizedTooltip}}</p>
+										<p>{{m.spells[2].Tooltip}}</p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(5)">
 										<h4>{{m.spells[3].name}}</h4>
-										<p>{{m.spells[3].sanitizedTooltip}}</p>
+										<p>{{m.spells[3].Tooltip}}</p>
 									</div>
 								</section>																				
 							</div>

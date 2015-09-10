@@ -70,6 +70,7 @@ img.img-thumbnail.champ{
     text-align: center;
 }
 .nav-pills>li.active{
-	background-color: #337ab7;
-}
+    margin-top: 15px;
+    border-bottom-style: solid;
+    padding-bottom: 1px;}
 .bottom-margin { margin-bottom:50px;}
