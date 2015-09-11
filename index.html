@@ -116,7 +116,7 @@
 									</div>
 									<div class="panel" ng-show="panel.isSelected(2)">
 										<h4>{{m.spells[0].name}}</h4>
-										<p>{{m.spells[0].tooltip}}</p>
+										<p ng-bind-html={{m.spells[0].tooltip}}></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(3)">
 										<h4>{{m.spells[1].name}}</h4>
