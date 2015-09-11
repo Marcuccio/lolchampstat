@@ -1,6 +1,6 @@
 (function(){
     
-	var app = angular.module('stats', [ ]);
+	var app = angular.module('stats', ['ngSanitize']);
 
 	app.controller('ChampController', function($scope, $http){
 		$scope.predicate = 'name';
@@ -21,10 +21,10 @@
 			.success(function(data, status, headers, config) {
 				 $scope.m = data;
 			})
-			.error(function(data, status, headers, config) {
-			  // log error
-				 console.log("errore nella get");
-			});
+			$scope.Q = m.spells[0].tooltip;
+			$scope.W = m.spells[1].tooltip;
+			$scope.E = m.spells[2].tooltip;
+			$scope.R = m.spells[3].tooltip;
 		}; 
 	});
 	
