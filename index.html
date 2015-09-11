@@ -13,19 +13,19 @@
 			<!--Number Patch-->
 			<p class="white">Patch: <strong>{{c.version}}</strong></p>
 		</div>
-	</div>	//patch	
+	</div>	
 	<div id="content-promo">
 		<div class="content-promo-rotator">
 			<div class="promo-background">
 			</div>
 		</div>
-	</div> //riven header
+	</div> 
 	<div class="container" ng-controller="ModalController as modal">
 		<div class="row bottom-margin" >
 			<div class="col-md-9 col-offset-3">
 				<p class="white">Search: </p><input ng-model="query">
 			</div>
-		</div>	//search
+		</div>
 		
 		<div class="row">//table
 			<div class="col-md-12" ng-controller="ChampController as champ">
@@ -116,19 +116,19 @@
 									</div>
 									<div class="panel" ng-show="panel.isSelected(2)">
 										<h4>{{m.spells[0].name}}</h4>
-										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[0].name)"></p>
+										<p ng-bind-html="TrustDangerousSnippet(m.spells[0].name)"></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(3)">
 										<h4>{{m.spells[1].name}}</h4>
-										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[1].name)"></p>
+										<p ng-bind-html="TrustDangerousSnippet(m.spells[1].tooltip)"></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(4)">
 										<h4>{{m.spells[2].name}}</h4>
-										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[2].name)"></p>
+										<p ng-bind-html="TrustDangerousSnippet(m.spells[2].tooltip)"></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(5)">
 										<h4>{{m.spells[3].name}}</h4>
-										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[3].name)"></p>
+										<p ng-bind-html="TrustDangerousSnippet(m.spells[3].tooltip)"></p>
 									</div>
 								</section>																				
 							</div>
