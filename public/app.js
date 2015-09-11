@@ -14,19 +14,17 @@
 			});
 		});
 	
-	app.controller('ModalController', function($scope, $http){
+	app.controller('ModalController', ['$scope', '$sce',function($scope, $http){
 		this.loadModal = function(id){
 			console.log(id);
 			$http.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/'+id+'?locale=it_IT&champData=passive,skins,spells&api_key=2ccc4671-a16b-461e-8ce3-8c59efec08b8')
 			.success(function(data, status, headers, config) {
 				 $scope.m = data;
 			})
-			$scope.Q = m.spells[0].tooltip;
-			$scope.W = m.spells[1].tooltip;
-			$scope.E = m.spells[2].tooltip;
-			$scope.R = m.spells[3].tooltip;
-		}; 
-	});
+			$scope.deliberatelyTrustDangerousSnippet = function(AShtml) {
+               return $sce.trustAsHtml(AShtml);
+			}; 
+	}]);
 	
 	app.controller("PanelController", function(){ 
 		this.tab=1;

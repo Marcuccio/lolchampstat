@@ -116,19 +116,19 @@
 									</div>
 									<div class="panel" ng-show="panel.isSelected(2)">
 										<h4>{{m.spells[0].name}}</h4>
-										<p ng-bind-html="Q"></p>
+										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[0].name)"></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(3)">
 										<h4>{{m.spells[1].name}}</h4>
-										<p ng-bind-html="W"></p>
+										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[1].name)"></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(4)">
 										<h4>{{m.spells[2].name}}</h4>
-										<p ng-bind-html="E"></p>
+										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[2].name)"></p>
 									</div>
 									<div class="panel" ng-show="panel.isSelected(5)">
 										<h4>{{m.spells[3].name}}</h4>
-										<p ng-bind-html="R"></p>
+										<p ng-bind-html="deliberatelyTrustDangerousSnippet(m.spells[3].name)"></p>
 									</div>
 								</section>																				
 							</div>
@@ -140,6 +140,7 @@
 	</div>
     
    <script type="text/javascript" src="angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.js"></script>
    <script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap.min.js"></script>
