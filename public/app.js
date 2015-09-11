@@ -22,8 +22,8 @@
 				 $scope.m = data;
 			});
 			
-			$scope.TrustDangerousSnippet = function(AShtml) {
-               return $sce.trustAsHtml(AShtml);
+			$scope.trustSnippet = function(snippet) {
+               return $sce.trustAsHtml(snippet);
 			};
 		}
 	}]);
