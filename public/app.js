@@ -6,14 +6,31 @@
 		$scope.predicate = 'name';
 		$http.get('https://lolchampstat.herokuapp.com/champ_file.json')
 			.success(function(data, status, headers, config) {
-				 $scope.c = data;
+				$scope.c = data;
 			})
 			.error(function(data, status, headers, config) {
 			  // log error
 				 console.log("errore nella get");
 			});
 		});
-	
+		$scope.tagsIncludes = [];
+		$scope.includeTags = function(tag) {
+		  var i = $.inArray(tag, $scope.tagsIncludes);
+		  if (i > -1) {
+				$scope.tagsIncludes.splice(i, 1);
+		  } else {
+				$scope.tagsIncludes.push(tag);
+		  }
+		}
+		$scope.tagsFilter = function(tag) {
+		  if ($scope.tagsIncludes.length > 0) {
+				if ($.inArray(c.champions.tags, $scope.tagsIncludes) < 0){
+				return;    
+				}
+		  }
+		  return tag;
+		}
+
 	app.controller('ModalController', ['$scope', '$http', '$sce', function($scope, $http, $sce){
 		this.loadModal = function(id){
 			console.log(id);
