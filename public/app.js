@@ -18,7 +18,8 @@
 			  if (i > -1) {
 					$scope.tagsIncludes.splice(i, 1);
 			  } else {
-					$scope.tagsIncludes.push(tag);
+				  console.log(tag);
+				  $scope.tagsIncludes.push(tag);
 			  }
 			}
 			$scope.tagsFilter = function(tag) {
