@@ -24,7 +24,7 @@
 		}
 		$scope.tagsFilter = function(tag) {
 		  if ($scope.tagsIncludes.length > 0) {
-				if ($.inArray(c.champions.tags, $scope.tagsIncludes) < 0){
+				if ($.inArray($scope.c.champions.tags, $scope.tagsIncludes) < 0){
 				return;    
 				}
 		  }
