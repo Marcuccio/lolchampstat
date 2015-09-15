@@ -13,7 +13,6 @@
 			  // log error
 				 console.log("errore nella get");
 			})
-		console.log(c);
 		$scope.tagsIncludes = [];
 		$scope.includeTags = function(tag) {
 		  var i = $.inArray(tag, $scope.tagsIncludes);
