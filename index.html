@@ -51,7 +51,7 @@
 							</tr> 
 					  </thead>
 					  <tbody ng-controller="ModalController as modal">
-							<tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query">
+							<tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:tagsFilter">
 								<td display: table-cell ><img class="img-thumbnail champ" ng-src="{{item.name}}_Square_0.png"></td>
 								<td class="text-center" display: table-cell >{{item.name}}</td>
 								<td class="text-center" display: table-cell >{{item.stats.armor}}</td>
