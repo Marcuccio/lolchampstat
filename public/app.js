@@ -4,10 +4,10 @@
 
 	app.controller('ChampController', function($scope, $http){
 		$scope.predicate = 'name';
-		var c;
 		$http.get('https://lolchampstat.herokuapp.com/champ_file.json')
 			.success(function(data, status, headers, config) {
-				c = data;
+				$scope.c = data;
+				console.log(c);
 			})
 			.error(function(data, status, headers, config) {
 			  // log error
@@ -33,7 +33,6 @@
 		}
 	});
 		
-
 	app.controller('ModalController', ['$scope', '$http', '$sce', function($scope, $http, $sce){
 		this.loadModal = function(id){
 			console.log(id);
