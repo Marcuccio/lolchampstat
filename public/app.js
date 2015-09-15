@@ -7,7 +7,6 @@
 		$http.get('https://lolchampstat.herokuapp.com/champ_file.json')
 			.success(function(data, status, headers, config) {
 				$scope.c = data;
-				console.log(c);
 			})
 			.error(function(data, status, headers, config) {
 			  // log error
@@ -29,7 +28,7 @@
 				return;    
 				}
 		  }
-		  return c;
+		  return $scope.c;
 		}
 	});
 		
