@@ -34,7 +34,6 @@
 		
 	app.controller('ModalController', ['$scope', '$http', '$sce', function($scope, $http, $sce){
 		this.loadModal = function(id){
-			console.log(id);
 			$http.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/'+id+'?locale=it_IT&champData=passive,skins,spells&api_key=2ccc4671-a16b-461e-8ce3-8c59efec08b8')
 			.success(function(data, status, headers, config) {
 				 $scope.m = data;
