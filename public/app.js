@@ -22,13 +22,13 @@
 			  $scope.tagsIncludes.push(tag);
 		  }
 		}
-		$scope.tagsFilter = function(tag) {
+		$scope.tagsFilter = function(c) {
 		  if ($scope.tagsIncludes.length > 0) {
-				if ($.inArray($scope.c.champions.tags, $scope.tagsIncludes) < 0){
+				if ($.inArray(c.tags, $scope.tagsIncludes) < 0){
 				return;    
 				}
 		  }
-		  return $scope.c;
+		  return c;
 		}
 	});
 		
