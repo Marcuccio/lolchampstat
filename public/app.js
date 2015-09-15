@@ -6,6 +6,7 @@
 		$scope.predicate = 'name';
 		
 		$http.get('https://lolchampstat.herokuapp.com/champ_file.json')
+			var c;
 			.success(function(data, status, headers, config) {
 				$scope.c = data;
 			})
