@@ -24,16 +24,15 @@
 		<section class="row bottom-margin" >
 			<div class="col-md-9 col-offset-3">
 				<p class="white">Search: </p><input ng-model="query">
+				<input type="checkbox" ng-click="includeTags(assasin)"/> Assassin
+				<input type="checkbox" ng-click="includeTags(tank)" /> Tank
+				<input type="checkbox" ng-click="includeTags(support)"/> Support
+				<input type="checkbox" ng-click="includeTags(mage)"/> Mage
+				<input type="checkbox" ng-click="includeTags(marksman)"/> Marksman
+				<input type="checkbox" ng-click="includeTags(assasin)"/> Fighter
 			</div>
-			<input type="checkbox" ng-click="includeTags(assasin)"/> Assassin
-        	<input type="checkbox" ng-click="includeTags(tank)" /> Tank
-			<input type="checkbox" ng-click="includeTags(support)"/> Support
-			<input type="checkbox" ng-click="includeTags(mage)"/> Mage
-			<input type="checkbox" ng-click="includeTags(marksman)"/> Marksman
-			<input type="checkbox" ng-click="includeTags(assasin)"/> Fighter
-
 		</section>
-		
+		Filter dump: {{tagsIncludes}}
 		<div class="row">
 			<div class="col-md-12" ng-controller="ChampController as champ">
 				 <table class="table">
