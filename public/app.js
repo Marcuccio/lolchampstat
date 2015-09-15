@@ -4,10 +4,10 @@
 
 	app.controller('ChampController', function($scope, $http){
 		$scope.predicate = 'name';
-		$scope.c;
+		var c;
 		$http.get('https://lolchampstat.herokuapp.com/champ_file.json')
 			.success(function(data, status, headers, config) {
-				$scope.c = data;
+				c = data;
 			})
 			.error(function(data, status, headers, config) {
 			  // log error
