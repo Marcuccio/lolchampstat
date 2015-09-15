@@ -20,7 +20,7 @@
 			</div>
 		</div>
 	</div> 
-	<div class="container" ng-controller="ModalController as modal">
+	<div class="container" >
 		<section class="row bottom-margin" >
 			<div class="col-md-9 col-offset-3">
 				<p class="white">Search: </p><input ng-model="query">
@@ -34,7 +34,7 @@
 		</section>
 		Filter dump: {{tagsIncludes}}
 		<div class="row">
-			<div class="col-md-12" ng-controller="ChampController as champ">
+			<div class="col-md-12">
 				 <table class="table">
 					  <thead>
 							<tr>
@@ -50,7 +50,7 @@
 						  		<th class="text-center" display:table-header-group></th>
 							</tr> 
 					  </thead>
-					  <tbody>
+					  <tbody ng-controller="ModalController as modal">
 							<tr ng-repeat="item in c.champions | orderBy:predicate:reverse | filter:query:tagsFilter">
 								<td display: table-cell ><img class="img-thumbnail champ" ng-src="{{item.name}}_Square_0.png"></td>
 								<td class="text-center" display: table-cell >{{item.name}}</td>
