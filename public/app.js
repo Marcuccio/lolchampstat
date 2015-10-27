@@ -12,24 +12,6 @@
 			  // log error
 				 console.log("errore nella get");
 			})
-		$scope.tagsIncludes = [];
-		$scope.includeTags = function(tag) {
-		  var i = $.inArray(tag, $scope.tagsIncludes);
-		  if (i > -1) {
-				$scope.tagsIncludes.splice(i, 1);
-		  } else {
-			  console.log(tag);
-			  $scope.tagsIncludes.push(tag);
-		  }
-		}
-		$scope.tagsFilter = function(c) {
-		  if ($scope.tagsIncludes.length > 0) {
-				if ($.inArray(c.tags, $scope.tagsIncludes) < 0){
-				return;    
-				}
-		  }
-		  return c;
-		}
 	});
 		
 	app.controller('ModalController', ['$scope', '$http', '$sce', function($scope, $http, $sce){
