@@ -1,6 +1,6 @@
 (function(){
     
-	var app = angular.module('stats', ['ngSanitize']){
+	var app =angular.module('stats', ['ngSanitize'], function($compileProvider) {
     // configure new 'compile' directive by passing a directive
     // factory function. The factory function injects the '$compile'
     $compileProvider.directive('compile', function($compile) {
@@ -25,7 +25,7 @@
         );
       };
     });
-  };
+  });
 
 	app.controller('ChampController', function($scope, $http){
 		$scope.predicate = 'name';
@@ -66,5 +66,6 @@
 		};	
 	});
 
+	app.directive 
     
 })();
