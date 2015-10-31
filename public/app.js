@@ -44,21 +44,25 @@
 			$http.get('https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/'+id+'?locale=it_IT&champData=passive,skins,spells&api_key=2ccc4671-a16b-461e-8ce3-8c59efec08b8')
 			.success(function(data, status, headers, config) {
 				$scope.m = data;
-				$scope.passive=$scope.m.passive.sanitizedDescription;
-				$scope.Q=$scope.m.spells[0].tooltip;
-				console.log(Q);
-				$scope.W=m.spells[1].tooltip;
-				$scope.E=m.spells[2].tooltip;
-				$scope.R=m.spells[3].tooltip;
+				$scope.passive = $scope.m.passive.sanitizedDescription;
+				$scope.Q = $scope.m.spells[0].tooltip;
+				$scope.W = $scope.m.spells[1].tooltip;
+				$scope.E = $scope.m.spells[2].tooltip;
+				$scope.R = $scope.m.spells[3].tooltip;
 			});			
 		}
 	}]);
 	
 	app.controller("PanelController", function(){ 
-		this.tab=1;
+		this.tab=4;
 
 		this.selectTab = function(setTab){
 			this.tab=setTab;
+			$scope.e1 = $scope.m.spells[setTab].effectBurn[1];
+			$scope.e2 = $scope.m.spells[setTab].effectBurn[2];
+			$scope.e3 = $scope.m.spells[setTab].effectBurn[3];
+			$scope.e4 = $scope.m.spells[setTab].effectBurn[4];
+			$scope.e5 = $scope.m.spells[setTab].effectBurn[5];
 		};
 		this.isSelected = function(checkTab){
 			return this.tab === checkTab;
