@@ -1,5 +1,12 @@
 (function(){
-    
+   var coeff = {
+		"f1":"",
+		"f2":"",
+		"f3":"",
+		"a1":"",
+		"a2":"",
+		"a3":"",
+	}; 
 	var app =angular.module('stats', ['ngSanitize'], function($compileProvider) {
     // configure new 'compile' directive by passing a directive
     // factory function. The factory function injects the '$compile'
