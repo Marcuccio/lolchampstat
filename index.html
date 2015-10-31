@@ -109,23 +109,23 @@
 										<li ng-class="{active:panel.isSelected(2)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[2].image.full}}" ng-click="panel.selectTab(2)"></li>
 										<li ng-class="{active:panel.isSelected(3)}"><img ng-src="http://ddragon.leagueoflegends.com/cdn/{{c.version}}/img/spell/{{m.spells[3].image.full}}" ng-click="panel.selectTab(3)"></li>
 									</ul>									
-									<div class="panel" ng-show="panel.isSelected(1)" ng-init="e1=6">
+									<div class="panel" ng-show="panel.isSelected(4)" ng-init="e1=6">
 										<h4>{{m.passive.name}}</h4>
 										<p compile="passive"></p>
 									</div>
-									<div class="panel" ng-show="panel.isSelected(2)">
+									<div class="panel" ng-show="panel.isSelected(0)">
 										<h4>{{m.spells[0].name}}</h4>
 										<p compile="Q"></p>
 									</div>
-									<div class="panel" ng-show="panel.isSelected(3)">
+									<div class="panel" ng-show="panel.isSelected(1)">
 										<h4>{{m.spells[1].name}}</h4>
 										<p compile="W"></p>
 									</div>
-									<div class="panel" ng-show="panel.isSelected(4)">
+									<div class="panel" ng-show="panel.isSelected(2)">
 										<h4>{{m.spells[2].name}}</h4>
 										<p compile="E"></p>
 									</div>
-									<div class="panel" ng-show="panel.isSelected(5)">
+									<div class="panel" ng-show="panel.isSelected(3)">
 										<h4>{{m.spells[3].name}}</h4>
 										<p compile="R"></p>
 									</div>

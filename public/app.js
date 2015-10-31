@@ -53,7 +53,7 @@
 		}
 	}]);
 	
-	app.controller("PanelController", function(){ 
+	app.controller("PanelController", ['$scope', function($scope){ 
 		this.tab=4;
 
 		this.selectTab = function(setTab){
@@ -67,6 +67,6 @@
 		this.isSelected = function(checkTab){
 			return this.tab === checkTab;
 		};	
-	});
+	}]);
     
 })();
