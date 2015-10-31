@@ -48,6 +48,7 @@
 			
 			$scope.passive=m.passive.sanitizedDescription;
 			$scope.Q=m.spells[0].tooltip;
+			console.log(Q);
 			$scope.W=m.spells[1].tooltip;
 			$scope.E=m.spells[2].tooltip;
 			$scope.R=m.spells[3].tooltip;
