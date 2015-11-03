@@ -26,6 +26,18 @@ app.get('/champ_file.json', function(request, response) {
     }
 });
 
+app.get('/log.json', function(request, response) {
+    var data = fs.readFileSync('./log.json');
+    try {
+        myObj = JSON.parse(data);
+        response.json(myObj);
+    }
+    catch (err) {
+        console.log('There has been an error parsing your JSON.')
+        console.log(err);
+    }
+});
+
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
