@@ -30,6 +30,6 @@ app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-new CronJob('* * * * * *', function() {
+new CronJob('00 30 11 * * *', function() {
   console.log('You will see this message every second');
 }, null, true, 'America/Los_Angeles');
