@@ -23,14 +23,17 @@ function singleChamp(p) {
 							console.log(err);
 						} else {
 							console.log("JSON champ list saved");
+							var logdoc = JSON.parse(fs.readFileSync('./log.json'));
 							var d = new Date();
-							var month = d.getMonth();
-							month = (month < 10 ? "0" : "") + month;
+							var month = d.getMonth()+1;//month goes from 0 to 11
+							month = (month < 10 ? "0" : "") + month;//month goes from 0 to 11
 							var day = d.getDate();
 							day = (day < 10 ? "0" : "") + day;
-							var log =  month + ":" + day;
-							data.champ_list_update.push(log);
-							fs.writeFile("log.json", JSON.stringify(log, null, 4), function(err) {
+							var log = {"Month": month, "Day": day, "Version": champ.version};
+							console.log(log);
+							logdoc.champ_list_update.push(log);
+							console.log(logdoc);
+							fs.writeFile("log.json", JSON.stringify(logdoc, null, 4), function(err) {
 								if(err) {
 									console.log(err);
 								} else {

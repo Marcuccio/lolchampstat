@@ -54,14 +54,15 @@ new CronJob('00 30 11 * * *', function() {
 								console.log(err);
 							} else {
 								console.log("JSON champ list saved");
+								var logdoc = JSON.parse(fs.readFileSync('./log.json'));//open log file
 								var d = new Date();
-								var month = d.getMonth();
-								month = (month < 10 ? "0" : "") + month;
+								var month = d.getMonth()+1;//month goes from 0 to 11
+								month = (month < 10 ? "0" : "") + month; 
 								var day = d.getDate();
 								day = (day < 10 ? "0" : "") + day;
-								var log =  month + ":" + day;
-								data.champ_list_update.push(log);
-								fs.writeFile("log.json", JSON.stringify(log, null, 4), function(err) {
+								var log = {"Month": month, "Day": day, "Version": champ.version};//log object
+								logdoc.champ_list_update.push(log);
+								fs.writeFile("log.json", JSON.stringify(logdoc, null, 4), function(err) {
 									if(err) {
 										console.log(err);
 									} else {
