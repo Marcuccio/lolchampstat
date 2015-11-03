@@ -42,7 +42,7 @@ app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
 
-new CronJob('00 30 11 * * *', function() {
+new CronJob('00 00 15 * * *', function() {
 	var champ = {"champions": [], "version":""}; //JSON wrapper
 	var data = fs.readFileSync('./log.json');
 	var URLtargetListChamp = "https://euw.api.pvp.net/api/lol/euw/v1.2/champion?api_key=2ccc4671-a16b-461e-8ce3-8c59efec08b8";
