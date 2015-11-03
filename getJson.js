@@ -61,8 +61,3 @@ https.get(URLtargetListChamp, function (res) {
         console.log("Got error: " + e.message);  
     });
 });
-
-
-
-
-
