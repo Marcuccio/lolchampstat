@@ -11,7 +11,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/img_square'));
 
-new CronJob('10 * * * * *', function() {
+new CronJob('00 00 06 * * 0-5', function() {
 	
 	var champ = {"champions": [], "version":""}; //JSON wrapper
 	https.get(URLversionListChamp, function (res) {
@@ -43,7 +43,7 @@ new CronJob('10 * * * * *', function() {
 			  console.log("Got error: " + e.message);  
 		 });
 	});
-		function singleChamp(p) {
+	function singleChamp(p) {
 		for (i = 0; i < p.champions.length; i++) {
 			 var URLsingleChamp = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/"+p.champions[i].id+"?champData=stats,tags&api_key=2ccc4671-a16b-461e-8ce3-8c59efec08b8";
 			 https.get(URLsingleChamp, function(res) {
@@ -83,7 +83,7 @@ new CronJob('10 * * * * *', function() {
 		}
 	};
 	
-}, null, true, 'America/Los_Angeles');
+}, null, true, 'Europe/Rome');
 
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
