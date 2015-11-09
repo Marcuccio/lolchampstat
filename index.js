@@ -11,7 +11,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/img_square'));
 
-new CronJob('10 * * * * *', function() {
+new CronJob('59 59 04 * * *', function() {
 	
 	var champ = {"champions": [], "version":""}; //JSON wrapper
 	https.get(URLversionListChamp, function (res) {
