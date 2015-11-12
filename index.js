@@ -63,21 +63,21 @@ new CronJob('59 59 12 * * *', function() {
 								fs.readFile('./log.json', 'utf8', function (err, data) {
 									if (err) throw err; // we'll not consider error handling for now
 									var logdoc = JSON.parse(data);
-								});
-								var d = new Date();
-								var month = d.getMonth()+1;//month goes from 0 to 11
-								month = (month < 10 ? "0" : "") + month; 
-								var day = d.getDate();
-								day = (day < 10 ? "0" : "") + day;
-								var log = {"Month": month, "Day": day, "Version": champ.version};//log object
-								logdoc.champ_list_update.push(log);
-								fs.writeFile("log.json", JSON.stringify(logdoc, null, 4), function(err) {
-									if(err) {
-										console.log(err);
-									} else {
-										console.log("JSON log saved");
-									}
-								}); 
+									var d = new Date();
+									var month = d.getMonth()+1;//month goes from 0 to 11
+									month = (month < 10 ? "0" : "") + month; 
+									var day = d.getDate();
+									day = (day < 10 ? "0" : "") + day;
+									var log = {"Month": month, "Day": day, "Version": champ.version};//log object
+									logdoc.champ_list_update.push(log);
+									fs.writeFile("log.json", JSON.stringify(logdoc, null, 4), function(err) {
+										if(err) {
+											console.log(err);
+										} else {
+											console.log("JSON log saved");
+										}
+									}); 
+								});			
 							}
 						}); 
 					}
