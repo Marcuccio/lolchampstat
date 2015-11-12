@@ -60,7 +60,10 @@ new CronJob('59 59 12 * * *', function() {
 								console.log(err);
 							} else {
 								console.log("JSON champ list saved");
-								var logdoc = JSON.parse(fs.readFileSync('./log.json'));//open log file
+								fs.readFile('./log.json', 'utf8', function (err, data) {
+									if (err) throw err; // we'll not consider error handling for now
+									var logdoc = JSON.parse(data);
+								});
 								var d = new Date();
 								var month = d.getMonth()+1;//month goes from 0 to 11
 								month = (month < 10 ? "0" : "") + month; 
